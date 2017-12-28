@@ -7,7 +7,7 @@ function intent(sources) {
     return {
         switchPlayer: sources.DOM.events('keydown', { preventDefault: e => 9 === e.keyCode }).filter(ev => 9 === ev.keyCode),
         addPlayer: sources.DOM.select('.new.player').events('submit', { preventDefault: true }).map(ev => serialize(ev.target, { hash: true })).filter(data => data.name),
-        addScore: sources.DOM.select('.active.player input').events('keydown').filter(ev => 13 === ev.keyCode).map(ev => Number.parseInt(ev.target.value))
+        addScore: sources.DOM.select('.active.player input').events('keydown').filter(ev => 13 === ev.keyCode).map(ev => Number.parseInt(ev.target.value)).filter(score => !Number.isNaN(score))
     };
 }
 
