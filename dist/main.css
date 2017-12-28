@@ -1,0 +1,49 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
+.player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 5em;
+    font-family: 'Itim', cursive;
+    border: 1px solid #666;
+    background-color: #fdfdfd;
+    padding: 0 20px;
+}
+
+.player.active {
+    background-color: #dfdfdf;
+}
+
+.name input {
+    font-family: 'Itim', cursive;
+    font-size: 1em;
+    border: none;
+    width: 100%;
+    text-align: center;
+}
+
+.name {
+    border-bottom: 1px solid #999;
+    width: 90%;
+    text-align: center;
+}
+
+.score {
+    font-family: 'Sacramento', cursive;
+    font-size: .8em;
+    width: 100%;
+    text-align: right;
+    text-shadow: 3px 3px 0 #ccc;
+}
+
+.previous.score {
+    opacity: .45;
+    text-decoration: line-through;
+}
